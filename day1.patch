@@ -1,0 +1,1186 @@
+Subject: [PATCH] day1
+---
+Index: sky-common/src/main/java/com/sky/constant/AutoFillConstant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/constant/AutoFillConstant.java b/sky-common/src/main/java/com/sky/constant/AutoFillConstant.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/constant/AutoFillConstant.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,14 @@
++package com.sky.constant;
++
++/**
++ * 公共字段自动填充相关常量
++ */
++public class AutoFillConstant {
++    /**
++     * 实体类中的方法名称
++     */
++    public static final String SET_CREATE_TIME = "setCreateTime";
++    public static final String SET_UPDATE_TIME = "setUpdateTime";
++    public static final String SET_CREATE_USER = "setCreateUser";
++    public static final String SET_UPDATE_USER = "setUpdateUser";
++}
+Index: sky-common/src/main/java/com/sky/constant/JwtClaimsConstant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/constant/JwtClaimsConstant.java b/sky-common/src/main/java/com/sky/constant/JwtClaimsConstant.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/constant/JwtClaimsConstant.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,11 @@
++package com.sky.constant;
++
++public class JwtClaimsConstant {
++
++    public static final String EMP_ID = "empId";
++    public static final String USER_ID = "userId";
++    public static final String PHONE = "phone";
++    public static final String USERNAME = "username";
++    public static final String NAME = "name";
++
++}
+Index: sky-common/src/main/java/com/sky/constant/MessageConstant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/constant/MessageConstant.java b/sky-common/src/main/java/com/sky/constant/MessageConstant.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/constant/MessageConstant.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,27 @@
++package com.sky.constant;
++
++/**
++ * 信息提示常量类
++ */
++public class MessageConstant {
++
++    public static final String PASSWORD_ERROR = "密码错误";
++    public static final String ACCOUNT_NOT_FOUND = "账号不存在";
++    public static final String ACCOUNT_LOCKED = "账号被锁定";
++    public static final String UNKNOWN_ERROR = "未知错误";
++    public static final String USER_NOT_LOGIN = "用户未登录";
++    public static final String CATEGORY_BE_RELATED_BY_SETMEAL = "当前分类关联了套餐,不能删除";
++    public static final String CATEGORY_BE_RELATED_BY_DISH = "当前分类关联了菜品,不能删除";
++    public static final String SHOPPING_CART_IS_NULL = "购物车数据为空，不能下单";
++    public static final String ADDRESS_BOOK_IS_NULL = "用户地址为空，不能下单";
++    public static final String LOGIN_FAILED = "登录失败";
++    public static final String UPLOAD_FAILED = "文件上传失败";
++    public static final String SETMEAL_ENABLE_FAILED = "套餐内包含未启售菜品，无法启售";
++    public static final String PASSWORD_EDIT_FAILED = "密码修改失败";
++    public static final String DISH_ON_SALE = "起售中的菜品不能删除";
++    public static final String SETMEAL_ON_SALE = "起售中的套餐不能删除";
++    public static final String DISH_BE_RELATED_BY_SETMEAL = "当前菜品关联了套餐,不能删除";
++    public static final String ORDER_STATUS_ERROR = "订单状态错误";
++    public static final String ORDER_NOT_FOUND = "订单不存在";
++
++}
+Index: sky-common/src/main/java/com/sky/constant/PasswordConstant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/constant/PasswordConstant.java b/sky-common/src/main/java/com/sky/constant/PasswordConstant.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/constant/PasswordConstant.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,10 @@
++package com.sky.constant;
++
++/**
++ * 密码常量
++ */
++public class PasswordConstant {
++
++    public static final String DEFAULT_PASSWORD = "123456";
++
++}
+Index: sky-common/src/main/java/com/sky/constant/StatusConstant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/constant/StatusConstant.java b/sky-common/src/main/java/com/sky/constant/StatusConstant.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/constant/StatusConstant.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,13 @@
++package com.sky.constant;
++
++/**
++ * 状态常量，启用或者禁用
++ */
++public class StatusConstant {
++
++    //启用
++    public static final Integer ENABLE = 1;
++
++    //禁用
++    public static final Integer DISABLE = 0;
++}
+Index: sky-common/src/main/java/com/sky/context/BaseContext.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/context/BaseContext.java b/sky-common/src/main/java/com/sky/context/BaseContext.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/context/BaseContext.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,19 @@
++package com.sky.context;
++
++public class BaseContext {
++
++    public static ThreadLocal<Long> threadLocal = new ThreadLocal<>();
++
++    public static void setCurrentId(Long id) {
++        threadLocal.set(id);
++    }
++
++    public static Long getCurrentId() {
++        return threadLocal.get();
++    }
++
++    public static void removeCurrentId() {
++        threadLocal.remove();
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/enumeration/OperationType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/enumeration/OperationType.java b/sky-common/src/main/java/com/sky/enumeration/OperationType.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/enumeration/OperationType.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,18 @@
++package com.sky.enumeration;
++
++/**
++ * 数据库操作类型
++ */
++public enum OperationType {
++
++    /**
++     * 更新操作
++     */
++    UPDATE,
++
++    /**
++     * 插入操作
++     */
++    INSERT
++
++}
+Index: sky-common/src/main/java/com/sky/exception/AccountLockedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/AccountLockedException.java b/sky-common/src/main/java/com/sky/exception/AccountLockedException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/AccountLockedException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,15 @@
++package com.sky.exception;
++
++/**
++ * 账号被锁定异常
++ */
++public class AccountLockedException extends BaseException {
++
++    public AccountLockedException() {
++    }
++
++    public AccountLockedException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/AccountNotFoundException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/AccountNotFoundException.java b/sky-common/src/main/java/com/sky/exception/AccountNotFoundException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/AccountNotFoundException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,15 @@
++package com.sky.exception;
++
++/**
++ * 账号不存在异常
++ */
++public class AccountNotFoundException extends BaseException {
++
++    public AccountNotFoundException() {
++    }
++
++    public AccountNotFoundException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/AddressBookBusinessException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/AddressBookBusinessException.java b/sky-common/src/main/java/com/sky/exception/AddressBookBusinessException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/AddressBookBusinessException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,9 @@
++package com.sky.exception;
++
++public class AddressBookBusinessException extends BaseException {
++
++    public AddressBookBusinessException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/BaseException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/BaseException.java b/sky-common/src/main/java/com/sky/exception/BaseException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/BaseException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,15 @@
++package com.sky.exception;
++
++/**
++ * 业务异常
++ */
++public class BaseException extends RuntimeException {
++
++    public BaseException() {
++    }
++
++    public BaseException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/DeletionNotAllowedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/DeletionNotAllowedException.java b/sky-common/src/main/java/com/sky/exception/DeletionNotAllowedException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/DeletionNotAllowedException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,9 @@
++package com.sky.exception;
++
++public class DeletionNotAllowedException extends BaseException {
++
++    public DeletionNotAllowedException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/LoginFailedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/LoginFailedException.java b/sky-common/src/main/java/com/sky/exception/LoginFailedException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/LoginFailedException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,10 @@
++package com.sky.exception;
++
++/**
++ * 登录失败
++ */
++public class LoginFailedException extends BaseException{
++    public LoginFailedException(String msg){
++        super(msg);
++    }
++}
+Index: sky-common/src/main/java/com/sky/exception/OrderBusinessException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/OrderBusinessException.java b/sky-common/src/main/java/com/sky/exception/OrderBusinessException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/OrderBusinessException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,9 @@
++package com.sky.exception;
++
++public class OrderBusinessException extends BaseException {
++
++    public OrderBusinessException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/PasswordEditFailedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/PasswordEditFailedException.java b/sky-common/src/main/java/com/sky/exception/PasswordEditFailedException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/PasswordEditFailedException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,12 @@
++package com.sky.exception;
++
++/**
++ * 密码修改失败异常
++ */
++public class PasswordEditFailedException extends BaseException{
++
++    public PasswordEditFailedException(String msg){
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/PasswordErrorException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/PasswordErrorException.java b/sky-common/src/main/java/com/sky/exception/PasswordErrorException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/PasswordErrorException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,15 @@
++package com.sky.exception;
++
++/**
++ * 密码错误异常
++ */
++public class PasswordErrorException extends BaseException {
++
++    public PasswordErrorException() {
++    }
++
++    public PasswordErrorException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/SetmealEnableFailedException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/SetmealEnableFailedException.java b/sky-common/src/main/java/com/sky/exception/SetmealEnableFailedException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/SetmealEnableFailedException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,13 @@
++package com.sky.exception;
++
++/**
++ * 套餐启用失败异常
++ */
++public class SetmealEnableFailedException extends BaseException {
++
++    public SetmealEnableFailedException(){}
++
++    public SetmealEnableFailedException(String msg){
++        super(msg);
++    }
++}
+Index: sky-common/src/main/java/com/sky/exception/ShoppingCartBusinessException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/ShoppingCartBusinessException.java b/sky-common/src/main/java/com/sky/exception/ShoppingCartBusinessException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/ShoppingCartBusinessException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,9 @@
++package com.sky.exception;
++
++public class ShoppingCartBusinessException extends BaseException {
++
++    public ShoppingCartBusinessException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/exception/UserNotLoginException.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/exception/UserNotLoginException.java b/sky-common/src/main/java/com/sky/exception/UserNotLoginException.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/exception/UserNotLoginException.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,12 @@
++package com.sky.exception;
++
++public class UserNotLoginException extends BaseException {
++
++    public UserNotLoginException() {
++    }
++
++    public UserNotLoginException(String msg) {
++        super(msg);
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/json/JacksonObjectMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/json/JacksonObjectMapper.java b/sky-common/src/main/java/com/sky/json/JacksonObjectMapper.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/json/JacksonObjectMapper.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,51 @@
++package com.sky.json;
++
++import com.fasterxml.jackson.databind.DeserializationFeature;
++import com.fasterxml.jackson.databind.ObjectMapper;
++import com.fasterxml.jackson.databind.module.SimpleModule;
++import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
++import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
++import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
++import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
++import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
++import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
++
++import java.time.LocalDate;
++import java.time.LocalDateTime;
++import java.time.LocalTime;
++import java.time.format.DateTimeFormatter;
++
++import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
++
++/**
++ * 对象映射器:基于jackson将Java对象转为json，或者将json转为Java对象
++ * 将JSON解析为Java对象的过程称为 [从JSON反序列化Java对象]
++ * 从Java对象生成JSON的过程称为 [序列化Java对象到JSON]
++ */
++public class JacksonObjectMapper extends ObjectMapper {
++
++    public static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
++    //public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
++    public static final String DEFAULT_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm";
++    public static final String DEFAULT_TIME_FORMAT = "HH:mm:ss";
++
++    public JacksonObjectMapper() {
++        super();
++        //收到未知属性时不报异常
++        this.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
++
++        //反序列化时，属性不存在的兼容处理
++        this.getDeserializationConfig().withoutFeatures(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
++
++        SimpleModule simpleModule = new SimpleModule()
++                .addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)))
++                .addDeserializer(LocalDate.class, new LocalDateDeserializer(DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT)))
++                .addDeserializer(LocalTime.class, new LocalTimeDeserializer(DateTimeFormatter.ofPattern(DEFAULT_TIME_FORMAT)))
++                .addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)))
++                .addSerializer(LocalDate.class, new LocalDateSerializer(DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT)))
++                .addSerializer(LocalTime.class, new LocalTimeSerializer(DateTimeFormatter.ofPattern(DEFAULT_TIME_FORMAT)));
++
++        //注册功能模块 例如，可以添加自定义序列化器和反序列化器
++        this.registerModule(simpleModule);
++    }
++}
+Index: sky-common/src/main/java/com/sky/properties/AliOssProperties.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/properties/AliOssProperties.java b/sky-common/src/main/java/com/sky/properties/AliOssProperties.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/properties/AliOssProperties.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,17 @@
++package com.sky.properties;
++
++import lombok.Data;
++import org.springframework.boot.context.properties.ConfigurationProperties;
++import org.springframework.stereotype.Component;
++
++@Component
++@ConfigurationProperties(prefix = "sky.alioss")
++@Data
++public class AliOssProperties {
++
++    private String endpoint;
++    private String accessKeyId;
++    private String accessKeySecret;
++    private String bucketName;
++
++}
+Index: sky-common/src/main/java/com/sky/properties/JwtProperties.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/properties/JwtProperties.java b/sky-common/src/main/java/com/sky/properties/JwtProperties.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/properties/JwtProperties.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,26 @@
++package com.sky.properties;
++
++import lombok.Data;
++import org.springframework.boot.context.properties.ConfigurationProperties;
++import org.springframework.stereotype.Component;
++
++@Component
++@ConfigurationProperties(prefix = "sky.jwt")
++@Data
++public class JwtProperties {
++
++    /**
++     * 管理端员工生成jwt令牌相关配置
++     */
++    private String adminSecretKey;
++    private long adminTtl;
++    private String adminTokenName;
++
++    /**
++     * 用户端微信用户生成jwt令牌相关配置
++     */
++    private String userSecretKey;
++    private long userTtl;
++    private String userTokenName;
++
++}
+Index: sky-common/src/main/java/com/sky/properties/WeChatProperties.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/properties/WeChatProperties.java b/sky-common/src/main/java/com/sky/properties/WeChatProperties.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/properties/WeChatProperties.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,23 @@
++package com.sky.properties;
++
++import lombok.Data;
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.boot.context.properties.ConfigurationProperties;
++import org.springframework.stereotype.Component;
++
++@Component
++@ConfigurationProperties(prefix = "sky.wechat")
++@Data
++public class WeChatProperties {
++
++    private String appid; //小程序的appid
++    private String secret; //小程序的秘钥
++    private String mchid; //商户号
++    private String mchSerialNo; //商户API证书的证书序列号
++    private String privateKeyFilePath; //商户私钥文件
++    private String apiV3Key; //证书解密的密钥
++    private String weChatPayCertFilePath; //平台证书
++    private String notifyUrl; //支付成功的回调地址
++    private String refundNotifyUrl; //退款成功的回调地址
++
++}
+Index: sky-common/src/main/java/com/sky/result/PageResult.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/result/PageResult.java b/sky-common/src/main/java/com/sky/result/PageResult.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/result/PageResult.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,22 @@
++package com.sky.result;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++import java.io.Serializable;
++import java.util.List;
++
++/**
++ * 封装分页查询结果
++ */
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++public class PageResult implements Serializable {
++
++    private long total; //总记录数
++
++    private List records; //当前页数据集合
++
++}
+Index: sky-common/src/main/java/com/sky/result/Result.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/result/Result.java b/sky-common/src/main/java/com/sky/result/Result.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/result/Result.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,38 @@
++package com.sky.result;
++
++import lombok.Data;
++
++import java.io.Serializable;
++
++/**
++ * 后端统一返回结果
++ * @param <T>
++ */
++@Data
++public class Result<T> implements Serializable {
++
++    private Integer code; //编码：1成功，0和其它数字为失败
++    private String msg; //错误信息
++    private T data; //数据
++
++    public static <T> Result<T> success() {
++        Result<T> result = new Result<T>();
++        result.code = 1;
++        return result;
++    }
++
++    public static <T> Result<T> success(T object) {
++        Result<T> result = new Result<T>();
++        result.data = object;
++        result.code = 1;
++        return result;
++    }
++
++    public static <T> Result<T> error(String msg) {
++        Result result = new Result();
++        result.msg = msg;
++        result.code = 0;
++        return result;
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/utils/HttpClientUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/utils/HttpClientUtil.java b/sky-common/src/main/java/com/sky/utils/HttpClientUtil.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/utils/HttpClientUtil.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,179 @@
++package com.sky.utils;
++
++import com.alibaba.fastjson.JSONObject;
++import org.apache.http.NameValuePair;
++import org.apache.http.client.config.RequestConfig;
++import org.apache.http.client.entity.UrlEncodedFormEntity;
++import org.apache.http.client.methods.CloseableHttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.methods.HttpPost;
++import org.apache.http.client.utils.URIBuilder;
++import org.apache.http.entity.StringEntity;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.impl.client.HttpClients;
++import org.apache.http.message.BasicNameValuePair;
++import org.apache.http.util.EntityUtils;
++
++import java.io.IOException;
++import java.net.URI;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Map;
++
++/**
++ * Http工具类
++ */
++public class HttpClientUtil {
++
++    static final  int TIMEOUT_MSEC = 5 * 1000;
++
++    /**
++     * 发送GET方式请求
++     * @param url
++     * @param paramMap
++     * @return
++     */
++    public static String doGet(String url,Map<String,String> paramMap){
++        // 创建Httpclient对象
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++
++        String result = "";
++        CloseableHttpResponse response = null;
++
++        try{
++            URIBuilder builder = new URIBuilder(url);
++            if(paramMap != null){
++                for (String key : paramMap.keySet()) {
++                    builder.addParameter(key,paramMap.get(key));
++                }
++            }
++            URI uri = builder.build();
++
++            //创建GET请求
++            HttpGet httpGet = new HttpGet(uri);
++
++            //发送请求
++            response = httpClient.execute(httpGet);
++
++            //判断响应状态
++            if(response.getStatusLine().getStatusCode() == 200){
++                result = EntityUtils.toString(response.getEntity(),"UTF-8");
++            }
++        }catch (Exception e){
++            e.printStackTrace();
++        }finally {
++            try {
++                response.close();
++                httpClient.close();
++            } catch (IOException e) {
++                e.printStackTrace();
++            }
++        }
++
++        return result;
++    }
++
++    /**
++     * 发送POST方式请求
++     * @param url
++     * @param paramMap
++     * @return
++     * @throws IOException
++     */
++    public static String doPost(String url, Map<String, String> paramMap) throws IOException {
++        // 创建Httpclient对象
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        CloseableHttpResponse response = null;
++        String resultString = "";
++
++        try {
++            // 创建Http Post请求
++            HttpPost httpPost = new HttpPost(url);
++
++            // 创建参数列表
++            if (paramMap != null) {
++                List<NameValuePair> paramList = new ArrayList();
++                for (Map.Entry<String, String> param : paramMap.entrySet()) {
++                    paramList.add(new BasicNameValuePair(param.getKey(), param.getValue()));
++                }
++                // 模拟表单
++                UrlEncodedFormEntity entity = new UrlEncodedFormEntity(paramList);
++                httpPost.setEntity(entity);
++            }
++
++            httpPost.setConfig(builderRequestConfig());
++
++            // 执行http请求
++            response = httpClient.execute(httpPost);
++
++            resultString = EntityUtils.toString(response.getEntity(), "UTF-8");
++        } catch (Exception e) {
++            throw e;
++        } finally {
++            try {
++                response.close();
++            } catch (IOException e) {
++                e.printStackTrace();
++            }
++        }
++
++        return resultString;
++    }
++
++    /**
++     * 发送POST方式请求
++     * @param url
++     * @param paramMap
++     * @return
++     * @throws IOException
++     */
++    public static String doPost4Json(String url, Map<String, String> paramMap) throws IOException {
++        // 创建Httpclient对象
++        CloseableHttpClient httpClient = HttpClients.createDefault();
++        CloseableHttpResponse response = null;
++        String resultString = "";
++
++        try {
++            // 创建Http Post请求
++            HttpPost httpPost = new HttpPost(url);
++
++            if (paramMap != null) {
++                //构造json格式数据
++                JSONObject jsonObject = new JSONObject();
++                for (Map.Entry<String, String> param : paramMap.entrySet()) {
++                    jsonObject.put(param.getKey(),param.getValue());
++                }
++                StringEntity entity = new StringEntity(jsonObject.toString(),"utf-8");
++                //设置请求编码
++                entity.setContentEncoding("utf-8");
++                //设置数据类型
++                entity.setContentType("application/json");
++                httpPost.setEntity(entity);
++            }
++
++            httpPost.setConfig(builderRequestConfig());
++
++            // 执行http请求
++            response = httpClient.execute(httpPost);
++
++            resultString = EntityUtils.toString(response.getEntity(), "UTF-8");
++        } catch (Exception e) {
++            throw e;
++        } finally {
++            try {
++                response.close();
++            } catch (IOException e) {
++                e.printStackTrace();
++            }
++        }
++
++        return resultString;
++    }
++    private static RequestConfig builderRequestConfig() {
++        return RequestConfig.custom()
++                .setConnectTimeout(TIMEOUT_MSEC)
++                .setConnectionRequestTimeout(TIMEOUT_MSEC)
++                .setSocketTimeout(TIMEOUT_MSEC).build();
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/utils/JwtUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/utils/JwtUtil.java b/sky-common/src/main/java/com/sky/utils/JwtUtil.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/utils/JwtUtil.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,58 @@
++package com.sky.utils;
++
++import io.jsonwebtoken.Claims;
++import io.jsonwebtoken.JwtBuilder;
++import io.jsonwebtoken.Jwts;
++import io.jsonwebtoken.SignatureAlgorithm;
++import java.nio.charset.StandardCharsets;
++import java.util.Date;
++import java.util.Map;
++
++public class JwtUtil {
++    /**
++     * 生成jwt
++     * 使用Hs256算法, 私匙使用固定秘钥
++     *
++     * @param secretKey jwt秘钥
++     * @param ttlMillis jwt过期时间(毫秒)
++     * @param claims    设置的信息
++     * @return
++     */
++    public static String createJWT(String secretKey, long ttlMillis, Map<String, Object> claims) {
++        // 指定签名的时候使用的签名算法，也就是header那部分
++        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
++
++        // 生成JWT的时间
++        long expMillis = System.currentTimeMillis() + ttlMillis;
++        Date exp = new Date(expMillis);
++
++        // 设置jwt的body
++        JwtBuilder builder = Jwts.builder()
++                // 如果有私有声明，一定要先设置这个自己创建的私有的声明，这个是给builder的claim赋值，一旦写在标准的声明赋值之后，就是覆盖了那些标准的声明的
++                .setClaims(claims)
++                // 设置签名使用的签名算法和签名使用的秘钥
++                .signWith(signatureAlgorithm, secretKey.getBytes(StandardCharsets.UTF_8))
++                // 设置过期时间
++                .setExpiration(exp);
++
++        return builder.compact();
++    }
++
++    /**
++     * Token解密
++     *
++     * @param secretKey jwt秘钥 此秘钥一定要保留好在服务端, 不能暴露出去, 否则sign就可以被伪造, 如果对接多个客户端建议改造成多个
++     * @param token     加密后的token
++     * @return
++     */
++    public static Claims parseJWT(String secretKey, String token) {
++        // 得到DefaultJwtParser
++        Claims claims = Jwts.parser()
++                // 设置签名的秘钥
++                .setSigningKey(secretKey.getBytes(StandardCharsets.UTF_8))
++                // 设置需要解析的jwt
++                .parseClaimsJws(token).getBody();
++        return claims;
++    }
++
++}
+Index: sky-common/src/main/java/com/sky/utils/WeChatPayUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sky-common/src/main/java/com/sky/utils/WeChatPayUtil.java b/sky-common/src/main/java/com/sky/utils/WeChatPayUtil.java
+new file mode 100644
+--- /dev/null	(revision 4782480fe454dab052fa945775475bd8d844e44d)
++++ b/sky-common/src/main/java/com/sky/utils/WeChatPayUtil.java	(revision 4782480fe454dab052fa945775475bd8d844e44d)
+@@ -0,0 +1,235 @@
++package com.sky.utils;
++
++import com.alibaba.fastjson.JSON;
++import com.alibaba.fastjson.JSONObject;
++import com.sky.properties.WeChatProperties;
++import com.wechat.pay.contrib.apache.httpclient.WechatPayHttpClientBuilder;
++import com.wechat.pay.contrib.apache.httpclient.util.PemUtil;
++import org.apache.commons.lang.RandomStringUtils;
++import org.apache.http.HttpHeaders;
++import org.apache.http.client.methods.CloseableHttpResponse;
++import org.apache.http.client.methods.HttpGet;
++import org.apache.http.client.methods.HttpPost;
++import org.apache.http.entity.ContentType;
++import org.apache.http.entity.StringEntity;
++import org.apache.http.impl.client.CloseableHttpClient;
++import org.apache.http.util.EntityUtils;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Component;
++
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.FileNotFoundException;
++import java.math.BigDecimal;
++import java.security.PrivateKey;
++import java.security.Signature;
++import java.security.cert.X509Certificate;
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.Base64;
++import java.util.List;
++
++/**
++ * 微信支付工具类
++ */
++@Component
++public class WeChatPayUtil {
++
++    //微信支付下单接口地址
++    public static final String JSAPI = "https://api.mch.weixin.qq.com/v3/pay/transactions/jsapi";
++
++    //申请退款接口地址
++    public static final String REFUNDS = "https://api.mch.weixin.qq.com/v3/refund/domestic/refunds";
++
++    @Autowired
++    private WeChatProperties weChatProperties;
++
++    /**
++     * 获取调用微信接口的客户端工具对象
++     *
++     * @return
++     */
++    private CloseableHttpClient getClient() {
++        PrivateKey merchantPrivateKey = null;
++        try {
++            //merchantPrivateKey商户API私钥，如何加载商户API私钥请看常见问题
++            merchantPrivateKey = PemUtil.loadPrivateKey(new FileInputStream(new File(weChatProperties.getPrivateKeyFilePath())));
++            //加载平台证书文件
++            X509Certificate x509Certificate = PemUtil.loadCertificate(new FileInputStream(new File(weChatProperties.getWeChatPayCertFilePath())));
++            //wechatPayCertificates微信支付平台证书列表。你也可以使用后面章节提到的“定时更新平台证书功能”，而不需要关心平台证书的来龙去脉
++            List<X509Certificate> wechatPayCertificates = Arrays.asList(x509Certificate);
++
++            WechatPayHttpClientBuilder builder = WechatPayHttpClientBuilder.create()
++                    .withMerchant(weChatProperties.getMchid(), weChatProperties.getMchSerialNo(), merchantPrivateKey)
++                    .withWechatPay(wechatPayCertificates);
++
++            // 通过WechatPayHttpClientBuilder构造的HttpClient，会自动的处理签名和验签
++            CloseableHttpClient httpClient = builder.build();
++            return httpClient;
++        } catch (FileNotFoundException e) {
++            e.printStackTrace();
++            return null;
++        }
++    }
++
++    /**
++     * 发送post方式请求
++     *
++     * @param url
++     * @param body
++     * @return
++     */
++    private String post(String url, String body) throws Exception {
++        CloseableHttpClient httpClient = getClient();
++
++        HttpPost httpPost = new HttpPost(url);
++        httpPost.addHeader(HttpHeaders.ACCEPT, ContentType.APPLICATION_JSON.toString());
++        httpPost.addHeader(HttpHeaders.CONTENT_TYPE, ContentType.APPLICATION_JSON.toString());
++        httpPost.addHeader("Wechatpay-Serial", weChatProperties.getMchSerialNo());
++        httpPost.setEntity(new StringEntity(body, "UTF-8"));
++
++        CloseableHttpResponse response = httpClient.execute(httpPost);
++        try {
++            String bodyAsString = EntityUtils.toString(response.getEntity());
++            return bodyAsString;
++        } finally {
++            httpClient.close();
++            response.close();
++        }
++    }
++
++    /**
++     * 发送get方式请求
++     *
++     * @param url
++     * @return
++     */
++    private String get(String url) throws Exception {
++        CloseableHttpClient httpClient = getClient();
++
++        HttpGet httpGet = new HttpGet(url);
++        httpGet.addHeader(HttpHeaders.ACCEPT, ContentType.APPLICATION_JSON.toString());
++        httpGet.addHeader(HttpHeaders.CONTENT_TYPE, ContentType.APPLICATION_JSON.toString());
++        httpGet.addHeader("Wechatpay-Serial", weChatProperties.getMchSerialNo());
++
++        CloseableHttpResponse response = httpClient.execute(httpGet);
++        try {
++            String bodyAsString = EntityUtils.toString(response.getEntity());
++            return bodyAsString;
++        } finally {
++            httpClient.close();
++            response.close();
++        }
++    }
++
++    /**
++     * jsapi下单
++     *
++     * @param orderNum    商户订单号
++     * @param total       总金额
++     * @param description 商品描述
++     * @param openid      微信用户的openid
++     * @return
++     */
++    private String jsapi(String orderNum, BigDecimal total, String description, String openid) throws Exception {
++        JSONObject jsonObject = new JSONObject();
++        jsonObject.put("appid", weChatProperties.getAppid());
++        jsonObject.put("mchid", weChatProperties.getMchid());
++        jsonObject.put("description", description);
++        jsonObject.put("out_trade_no", orderNum);
++        jsonObject.put("notify_url", weChatProperties.getNotifyUrl());
++
++        JSONObject amount = new JSONObject();
++        amount.put("total", total.multiply(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_HALF_UP).intValue());
++        amount.put("currency", "CNY");
++
++        jsonObject.put("amount", amount);
++
++        JSONObject payer = new JSONObject();
++        payer.put("openid", openid);
++
++        jsonObject.put("payer", payer);
++
++        String body = jsonObject.toJSONString();
++        return post(JSAPI, body);
++    }
++
++    /**
++     * 小程序支付
++     *
++     * @param orderNum    商户订单号
++     * @param total       金额，单位 元
++     * @param description 商品描述
++     * @param openid      微信用户的openid
++     * @return
++     */
++    public JSONObject pay(String orderNum, BigDecimal total, String description, String openid) throws Exception {
++        //统一下单，生成预支付交易单
++        String bodyAsString = jsapi(orderNum, total, description, openid);
++        //解析返回结果
++        JSONObject jsonObject = JSON.parseObject(bodyAsString);
++        System.out.println(jsonObject);
++
++        String prepayId = jsonObject.getString("prepay_id");
++        if (prepayId != null) {
++            String timeStamp = String.valueOf(System.currentTimeMillis() / 1000);
++            String nonceStr = RandomStringUtils.randomNumeric(32);
++            ArrayList<Object> list = new ArrayList<>();
++            list.add(weChatProperties.getAppid());
++            list.add(timeStamp);
++            list.add(nonceStr);
++            list.add("prepay_id=" + prepayId);
++            //二次签名，调起支付需要重新签名
++            StringBuilder stringBuilder = new StringBuilder();
++            for (Object o : list) {
++                stringBuilder.append(o).append("\n");
++            }
++            String signMessage = stringBuilder.toString();
++            byte[] message = signMessage.getBytes();
++
++            Signature signature = Signature.getInstance("SHA256withRSA");
++            signature.initSign(PemUtil.loadPrivateKey(new FileInputStream(new File(weChatProperties.getPrivateKeyFilePath()))));
++            signature.update(message);
++            String packageSign = Base64.getEncoder().encodeToString(signature.sign());
++
++            //构造数据给微信小程序，用于调起微信支付
++            JSONObject jo = new JSONObject();
++            jo.put("timeStamp", timeStamp);
++            jo.put("nonceStr", nonceStr);
++            jo.put("package", "prepay_id=" + prepayId);
++            jo.put("signType", "RSA");
++            jo.put("paySign", packageSign);
++
++            return jo;
++        }
++        return jsonObject;
++    }
++
++    /**
++     * 申请退款
++     *
++     * @param outTradeNo    商户订单号
++     * @param outRefundNo   商户退款单号
++     * @param refund        退款金额
++     * @param total         原订单金额
++     * @return
++     */
++    public String refund(String outTradeNo, String outRefundNo, BigDecimal refund, BigDecimal total) throws Exception {
++        JSONObject jsonObject = new JSONObject();
++        jsonObject.put("out_trade_no", outTradeNo);
++        jsonObject.put("out_refund_no", outRefundNo);
++
++        JSONObject amount = new JSONObject();
++        amount.put("refund", refund.multiply(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_HALF_UP).intValue());
++        amount.put("total", total.multiply(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_HALF_UP).intValue());
++        amount.put("currency", "CNY");
++
++        jsonObject.put("amount", amount);
++        jsonObject.put("notify_url", weChatProperties.getRefundNotifyUrl());
++
++        String body = jsonObject.toJSONString();
++
++        //调用申请退款接口
++        return post(REFUNDS, body);
++    }
++}
