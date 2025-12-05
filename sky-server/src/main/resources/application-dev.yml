@@ -9,7 +9,7 @@ sky:
 
   alioss:
     endpoint: oss-cn-chengdu.aliyuncs.com
-    access-key-id: LTAI5tBE9WStUDvdUvhhEDHP
-    access-key-secret: bkSH1tfGyja6BCj60FyyvuKuoY20pc
+    access-key-id: "YOUR_ACCESS_KEY_ID"      # 改成这个，不要留真实值
+    access-key-secret: "YOUR_ACCESS_KEY_SECRET" # 改成这个，不要留真实值
     bucket-name: verstappen
  
